@@ -5,12 +5,15 @@
   "devDependencies": {
     "jest-expo": "^0.3.0",
     "react-test-renderer": "~15.4.1",
+    "tslint": "^4.5.1",
+    "tslint-react": "^2.5.0",
     "typescript": "^2.2.1"
   },
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "build": "node_modules/.bin/tsc",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
