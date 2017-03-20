@@ -57,3 +57,6 @@ fastlane/Preview.html
 fastlane/screenshots
 
 .vscode
+coverage
+
+src/__snapshots__/

@@ -29,6 +29,7 @@
   "exclude": [
     "android",
     "build",
+    "config",
     "index.android.js",
     "index.ios.js",
     "ios",
