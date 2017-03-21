@@ -47,8 +47,14 @@
     "@types/react": "^15.0.17",
     "@types/react-dom": "^0.14.23",
     "@types/react-native": "^0.42.8",
+    "@types/react-redux": "^4.4.37",
+    "@types/redux": "^3.6.0",
     "react": "16.0.0-alpha.4",
     "react-dom": "^15.4.2",
-    "react-native": "0.43.0-rc.3"
+    "react-native": "0.43.0-rc.3",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-observable": "^0.14.1",
+    "rxjs": "^5.2.0"
   }
 }

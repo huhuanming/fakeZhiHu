@@ -28,6 +28,11 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>7xqlzr.dl1.z0.glb.clouddn.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
