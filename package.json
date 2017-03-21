@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@types/enzyme": "^2.7.5",
+    "@types/enzyme": "^2.7.6",
     "@types/jest": "^19.2.2",
     "@types/react-test-renderer": "^15.4.2",
     "babel-jest": "^19.0.0",
@@ -44,7 +44,7 @@
     ]
   },
   "dependencies": {
-    "@types/react": "^15.0.16",
+    "@types/react": "^15.0.17",
     "@types/react-dom": "^0.14.23",
     "@types/react-native": "^0.42.8",
     "react": "16.0.0-alpha.4",

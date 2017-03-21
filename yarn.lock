@@ -6,9 +6,9 @@
   version "0.22.0"
   resolved "http://registry.npm.taobao.org/@types/cheerio/download/@types/cheerio-0.22.0.tgz#4e308bf0e223c632b3de3adf521139dc7aa51e34"
 
-"@types/enzyme@^2.7.5":
-  version "2.7.5"
-  resolved "http://registry.npm.taobao.org/@types/enzyme/download/@types/enzyme-2.7.5.tgz#a7c52a444cfa7711b16096681d134f4718df8a86"
+"@types/enzyme@^2.7.6":
+  version "2.7.6"
+  resolved "http://registry.npm.taobao.org/@types/enzyme/download/@types/enzyme-2.7.6.tgz#b210dd68e0009a916a7f02f2d168cde1f85d35b9"
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -35,9 +35,13 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.16":
+"@types/react@*":
   version "15.0.16"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-15.0.16.tgz#78e39511a9cfcabf7f74ecd55180522f4290a0c1"
+
+"@types/react@^15.0.17":
+  version "15.0.17"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-15.0.17.tgz#e0d451e353155997be9b54620ba1ca3a8c33f480"
 
 abab@^1.0.3:
   version "1.0.3"
