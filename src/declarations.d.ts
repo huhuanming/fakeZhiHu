@@ -22,8 +22,8 @@ export interface IMetaPayloadAction<M, P> {
 }
 
 export interface IStartImage {
-	text: string;
-	img: string;
+	text: string
+	img: string
 }
 
 export interface IStore {
