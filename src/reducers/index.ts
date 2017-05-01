@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import startImage from './startImage'
+import routerReducer from './router'
+import startImageReducer from './startImage'
 
 export default combineReducers({
-  startImage,
+  router: routerReducer,
+  startImage: startImageReducer,
 })

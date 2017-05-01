@@ -1,3 +1,7 @@
+import * as React from 'react'
+import {
+  Animated,
+} from 'react-native'
 
 declare var reduxNativeDevToolsCompose: <R>(a: R) => R
 
@@ -28,4 +32,5 @@ export interface IStartImage {
 
 export interface IStore {
  startImage: IStartImage
+ router: any
 }

@@ -23,11 +23,6 @@
       "error",
       "warn"
     ],
-    "interface-name": [
-      false,
-      "never-prefix"
-    ],
-    "no-empty-interface": false,
     "member-access": false,
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,

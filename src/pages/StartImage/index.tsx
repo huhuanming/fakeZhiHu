@@ -1,10 +1,8 @@
 import * as React from 'react'
-import { Image } from 'react-native'
+import { Image, View } from 'react-native'
 import { connect } from 'react-redux'
-import { fetchStartImage, IFetchStartImageAction } from './actions/startImage'
+import { fetchStartImage, IFetchStartImageAction } from '../../actions/startImage'
 import { IStartImage, IStore } from './declarations'
-
-interface IOwnProps {}
 
 interface IStateProps {
   startImage: IStartImage
@@ -14,9 +12,13 @@ interface IDispacthProps {
   fetchStartImage: IFetchStartImageAction
 }
 
-type IProps = IOwnProps & IStateProps & IDispacthProps
+type IProps = IStateProps & IDispacthProps
 
-export class StartImage extends React.Component<IProps, {}> {
+class StartImage extends React.Component<IProps, {}> {
+
+  static navigationOptions = {
+    title: 'First Screen',
+  }
 
   componentWillMount() {
     this.props.fetchStartImage()
@@ -24,7 +26,11 @@ export class StartImage extends React.Component<IProps, {}> {
 
   public render() {
     if (this.props.startImage.img === '') {
-      return null
+      return (
+        <View
+          style={{backgroundColor: 'red', flex: 1}}
+        />
+      )
     }
     return (
       <Image
@@ -43,4 +49,7 @@ const mapDispatchToProps = {
   fetchStartImage,
 }
 
-export default connect<IStateProps, IDispacthProps, IOwnProps>(mapStateToProps, mapDispatchToProps)(StartImage)
+export default connect<IStateProps, IDispacthProps, {}>(
+  mapStateToProps,
+  mapDispatchToProps,
+)(StartImage)

@@ -11,6 +11,7 @@ const fetchStartImage =
       ActionTypes.FETCH_START_IMAGE,
     ).switchMapTo(Observable.ajax('http://localhost:8111/start-image'))
     .map((ajaxResponse: AjaxResponse) => recieveStartImage(ajaxResponse.response))
+    .catch((error: any) => Observable.empty())
 
 export default [
   fetchStartImage,

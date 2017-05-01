@@ -1,12 +1,12 @@
 import ActionTypes from '../actions/actionTypes'
-import { IPayloadAction, IStartImage } from '../declarations';
+import { IPayloadAction, IStartImage } from '../declarations'
 
 const defaultValue: IStartImage = {
   img: '',
   text: '',
 }
 
-const reducer = (
+const startImageReducer = (
   state = defaultValue,
   action: IPayloadAction<IStartImage>,
 ) => {
@@ -18,4 +18,4 @@ const reducer = (
   }
 }
 
-export default reducer
+export default startImageReducer

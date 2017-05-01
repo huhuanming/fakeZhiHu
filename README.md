@@ -22,7 +22,7 @@ yarn
 Build TypeScript Files
 
 ```shell
-yarn build -- --watch
+yarn tsc -- --watch
 ```
 Start React Native Packager
 

@@ -11,16 +11,15 @@
     "enzyme": "^2.7.1",
     "jest": "^19.0.2",
     "react-addons-test-utils": "^15.4.2",
-    "react-test-renderer": "~15.4.1",
+    "react-test-renderer": "16.0.0-alpha.6",
     "tslint": "^5.0.0",
-    "tslint-react": "^2.5.0",
-    "typescript": "^2.2.1"
+    "tslint-react": "^3.0.0",
+    "typescript": "^2.3.2"
   },
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "build": "node_modules/.bin/tsc",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
@@ -45,13 +44,13 @@
   },
   "dependencies": {
     "@types/react": "^15.0.21",
-    "@types/react-dom": "^0.14.23",
-    "@types/react-native": "^0.42.8",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-native": "^0.43.7",
     "@types/react-redux": "^4.4.37",
     "@types/redux": "^3.6.0",
-    "react": "16.0.0-alpha.4",
-    "react-dom": "^15.4.2",
-    "react-native": "0.43.0-rc.3",
+    "react": "16.0.0-alpha.6",
+    "react-dom": "16.0.0-alpha.6",
+    "react-native": "^0.43.4",
     "react-navigation": "^1.0.0-beta.7",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",

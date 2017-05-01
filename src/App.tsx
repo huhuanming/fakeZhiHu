@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Provider } from 'react-redux'
-import StartImage from './StartImage'
 import store from './middlewares'
+import Router from './pages/Router'
 
 export class App extends React.Component<{}, {}> {
   public render() {
     return (
       <Provider store={store}>
-        <StartImage />
+        <Router />
       </Provider>
     )
   }
