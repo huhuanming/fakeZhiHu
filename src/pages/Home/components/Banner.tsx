@@ -20,13 +20,13 @@ const styles = StyleSheet.create<IStyle>({
     bottom: 6,
   },
   shadow: {
-    backgroundColor: 'black',
+    backgroundColor: Color.black,
     flex: 1,
     opacity: 0.3,
   },
   title: {
     bottom: 28,
-    color: 'white',
+    color: Color.white,
     fontSize: 20,
     fontWeight: 'bold',
     marginHorizontal: 18,
