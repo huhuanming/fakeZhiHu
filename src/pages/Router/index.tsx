@@ -2,15 +2,20 @@ import * as React from 'react'
 import { addNavigationHelpers, StackNavigator } from 'react-navigation'
 import { connect, Dispatch } from 'react-redux'
 import { IStore } from '../../declarations'
+import Home from '../Home'
 import StartImage from '../StartImage'
 
 export const AppNavigator = StackNavigator({
+  Home: {
+    path: 'home',
+    screen: Home,
+  },
   StartImage: {
     path: 'startImage',
     screen: StartImage,
   },
 }, {
-  initialRouteName: 'StartImage',
+  initialRouteName: 'Home',
 })
 
 interface IStateProps {

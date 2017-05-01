@@ -1,4 +1,4 @@
-import { AppNavigator } from '../Router'
+import { AppNavigator } from '../pages/Router'
 
 const routerReducer = (
   state: any,

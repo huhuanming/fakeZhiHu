@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Image, View } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchStartImage, IFetchStartImageAction } from '../../actions/startImage'
-import { IStartImage, IStore } from './declarations'
+import { IStartImage, IStore } from '../../declarations'
 
 interface IStateProps {
   startImage: IStartImage

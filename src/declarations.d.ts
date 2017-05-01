@@ -31,6 +31,13 @@ export interface IStartImage {
 }
 
 export interface IStore {
+ banners: Banner[]
  startImage: IStartImage
  router: any
+}
+
+export interface Banner {
+  comment: string
+  title: string
+  url: string
 }
