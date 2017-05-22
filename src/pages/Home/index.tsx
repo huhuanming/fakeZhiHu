@@ -6,7 +6,6 @@ import { fetchBanners, IFetchBanners } from '../../actions/banner'
 import Color from '../../constants/color'
 import Banner from './components/Banner'
 
-
 interface IDispacthProps {
   navigate: any
   fetchBanners: IFetchBanners

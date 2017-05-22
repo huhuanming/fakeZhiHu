@@ -2,6 +2,8 @@ import * as React from 'react'
 import {
   Animated,
 } from 'react-native'
+import { NavigationState } from 'react-navigation'
+
 
 declare var reduxNativeDevToolsCompose: <R>(a: R) => R
 
@@ -33,7 +35,7 @@ export interface IStartImage {
 export interface IStore {
  banners: Banner[]
  startImage: IStartImage
- router: any
+ router: NavigationState
 }
 
 export interface Banner {

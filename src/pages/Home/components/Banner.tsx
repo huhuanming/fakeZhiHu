@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TextStyle, View, ViewStyle, ImageStyle } from 'react-native'
+import { Image, ImageStyle, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { connect } from 'react-redux'
 import Color from '../../../constants/color'

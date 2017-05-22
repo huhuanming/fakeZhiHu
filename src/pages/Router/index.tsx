@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { addNavigationHelpers, StackNavigator } from 'react-navigation'
+import { addNavigationHelpers, NavigationState, StackNavigator } from 'react-navigation'
 import { connect, Dispatch } from 'react-redux'
 import { IStore } from '../../declarations'
 import Home from '../Home'
@@ -19,7 +19,7 @@ export const AppNavigator = StackNavigator({
 })
 
 interface IStateProps {
-  router: any
+  router: NavigationState
 }
 
 interface IOwnProps {
