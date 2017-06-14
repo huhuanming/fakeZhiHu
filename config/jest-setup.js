@@ -7,4 +7,10 @@ window.requestAnimationFrame = () => {
   throw new Error('requestAnimationFrame is not supported in Node');
 };
 
+const { Response, Headers, Request } = require('whatwg-fetch');
+global.Response = Response;
+global.Headers = Headers;
+global.Request = Request;
+global.fetch = require('jest-fetch-mock');
+
 module.exports = react;

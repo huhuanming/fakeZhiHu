@@ -64,6 +64,13 @@
   version "1.2.6"
   resolved "http://registry.npm.taobao.org/@types/redux-actions/download/@types/redux-actions-1.2.6.tgz#cfdeea3271ebdabf23cdc237080e752b07171069"
 
+"@types/redux-mock-store@^0.0.8":
+  version "0.0.8"
+  resolved "http://registry.npm.taobao.org/@types/redux-mock-store/download/@types/redux-mock-store-0.0.8.tgz#b3978b068e316a2640e20f0d01a8a2c80ecda1cf"
+  dependencies:
+    redux "^3.6.0"
+    redux-mock-store "^1.2.3"
+
 "@types/redux@^3.6.0":
   version "3.6.31"
   resolved "http://registry.npm.taobao.org/@types/redux/download/@types/redux-3.6.31.tgz#40eafa7575db36b912ce0059b85de98c205b0708"
@@ -2296,6 +2303,12 @@ jest-environment-node@^20.0.3:
     jest-mock "^20.0.3"
     jest-util "^20.0.3"
 
+jest-fetch-mock@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/jest-fetch-mock/download/jest-fetch-mock-1.1.1.tgz#7548b6d0c0c77071e9f8652fcb4f8d537e988d1f"
+  dependencies:
+    whatwg-fetch "1.0.0"
+
 jest-haste-map@19.0.0:
   version "19.0.0"
   resolved "http://registry.npm.taobao.org/jest-haste-map/download/jest-haste-map-19.0.0.tgz#adde00b62b1fe04432a104b3254fc5004514b55e"
@@ -3568,6 +3581,10 @@ redux-actions@^2.0.3:
     lodash-es "^4.17.4"
     reduce-reducers "^0.1.0"
 
+redux-mock-store@^1.2.3:
+  version "1.2.3"
+  resolved "http://registry.npm.taobao.org/redux-mock-store/download/redux-mock-store-1.2.3.tgz#1b3ad299da91cb41ba30d68e3b6f024475fb9e1b"
+
 redux-observable@^0.14.1:
   version "0.14.1"
   resolved "http://registry.npm.taobao.org/redux-observable/download/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
@@ -4270,6 +4287,10 @@ whatwg-encoding@^1.0.1:
   resolved "http://registry.npm.taobao.org/whatwg-encoding/download/whatwg-encoding-1.0.1.tgz#3c6c451a198ee7aec55b1ec61d0920c67801a5f4"
   dependencies:
     iconv-lite "0.4.13"
+
+whatwg-fetch@1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/whatwg-fetch/download/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
 
 whatwg-fetch@>=0.10.0, whatwg-fetch@^1.0.0:
   version "1.1.1"

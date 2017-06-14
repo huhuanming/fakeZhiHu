@@ -5,7 +5,7 @@ import { SCREEN_TYPE } from '../constants/index'
 import { IStartImage, IStore } from '../declarations'
 import { switchScreen } from './switchScreen'
 
-const recieveStartImage = createAction('RECIVE_START_IMAGE', (response: IStartImage) => response)
+export const recieveStartImage = createAction('RECIVE_START_IMAGE', (response: IStartImage) => response)
 const recieveStartImageType = returntypeof(recieveStartImage)
 export type IRecieveStartImageAction = typeof recieveStartImageType
 export const fetchStartImages = () => (dispatch: Dispatch<IStore>) =>
