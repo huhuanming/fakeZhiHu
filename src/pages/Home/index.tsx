@@ -1,6 +1,6 @@
 import { format, isSameDay } from 'date-fns'
 import React from 'react'
-import { Image, SectionList, SectionListData, StatusBar, Text, View } from 'react-native'
+import { Dimensions, Image, SectionList, SectionListData, StatusBar, Text, View } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 import { connect } from 'react-redux'
 import { fetchBanners, IFetchBanners } from '../../actions/banner'
@@ -38,11 +38,25 @@ export class Index extends React.Component<IProps, {}> {
   renderListHeaderComponent = () => <Banner />
 
   renderItem = (info: {item: IPost, index: number}) => (
-    <View>
-      <Text>
+    <View
+     style={{
+       backgroundColor: 'white',
+       borderBottomColor: '#F7F7F7',
+       borderBottomWidth: 1,
+       flexDirection: 'row',
+       height: 88,
+       padding: 15,
+      }}
+    >
+      <Text
+        style={{ width: Dimensions.get('window').width - 30 - 85, fontSize: 16 }}
+      >
         {info.item.title}
       </Text>
-      <Image source={{ uri: info.item.img }} />
+      <Image
+        style={{ width: 85, height: 68 }}
+        source={{ uri: info.item.img }}
+      />
     </View>
   )
 
@@ -53,9 +67,9 @@ export class Index extends React.Component<IProps, {}> {
       return null
     }
     return (
-      <View style={{ height: 20, backgroundColor: Color.darkBlue }} >
-        <Text>
-          {format(section.key, 'YYYY 年 MM 月 DD 日')}
+      <View style={{ backgroundColor: Color.darkBlue}} >
+        <Text style={{ color: 'white', fontSize: 16, alignSelf: 'center', paddingVertical: 5 }}>
+          {format(section.key, 'MM 月 DD 日')}
         </Text>
       </View>
     )
@@ -89,7 +103,7 @@ export class Index extends React.Component<IProps, {}> {
 
   public render() {
     return (
-      <View style={{ flex: 1}}>
+      <View style={{ flex: 1, backgroundColor: 'white'}}>
         <StatusBar
           backgroundColor="blue"
           barStyle="light-content"

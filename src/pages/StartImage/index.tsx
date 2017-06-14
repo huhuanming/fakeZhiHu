@@ -2,7 +2,6 @@ import React from 'react'
 import { Image, StyleSheet, Text, TextStyle } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchStartImages, IFetchStartImages } from '../../actions/startImage'
-import { switchScreen, ISwitchScreen } from '../../actions/switchScreen'
 import { IStartImage, IStore } from '../../declarations'
 
 interface IStateProps {
@@ -10,20 +9,21 @@ interface IStateProps {
 }
 
 interface IDispacthProps {
-  fetchStartImages: IFetchStartImages
-  switchScreen: ISwitchScreen
+  fetchStartImages?: IFetchStartImages
 }
 
 type IProps = IStateProps & IDispacthProps
 
-class StartImage extends React.Component<IProps, {}> {
+export class StartImage extends React.Component<IProps, {}> {
 
   static navigationOptions = {
     title: 'First Screen',
   }
 
   componentWillMount() {
-    this.props.fetchStartImages()
+    if (this.props.fetchStartImages) {
+      this.props.fetchStartImages()
+    }
   }
 
   public render() {
@@ -62,7 +62,6 @@ const mapStateToProps = (store: IStore) => ({
 
 const mapDispatchToProps = {
   fetchStartImages,
-  switchScreen,
 }
 
 export default connect<IStateProps, IDispacthProps, {}>(
