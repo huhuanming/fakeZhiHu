@@ -1,7 +1,8 @@
-import * as React from 'react'
-import { Image, View } from 'react-native'
+import React from 'react'
+import { Image, StyleSheet, Text, TextStyle } from 'react-native'
 import { connect } from 'react-redux'
-import { fetchStartImage, IFetchStartImageAction } from '../../actions/startImage'
+import { fetchStartImages, IFetchStartImages } from '../../actions/startImage'
+import { switchScreen, ISwitchScreen } from '../../actions/switchScreen'
 import { IStartImage, IStore } from '../../declarations'
 
 interface IStateProps {
@@ -9,7 +10,8 @@ interface IStateProps {
 }
 
 interface IDispacthProps {
-  fetchStartImage: IFetchStartImageAction
+  fetchStartImages: IFetchStartImages
+  switchScreen: ISwitchScreen
 }
 
 type IProps = IStateProps & IDispacthProps
@@ -21,32 +23,46 @@ class StartImage extends React.Component<IProps, {}> {
   }
 
   componentWillMount() {
-    this.props.fetchStartImage()
+    this.props.fetchStartImages()
   }
 
   public render() {
-    if (this.props.startImage.img === '') {
-      return (
-        <View
-          style={{backgroundColor: 'red', flex: 1}}
-        />
+    if (this.props.startImage.img !== '') {
+      return  (
+        <Image
+          style={styles.image}
+          source={{ uri: this.props.startImage.img }}
+        >
+          <Text style={styles.text}>{this.props.startImage.text}</Text>
+        </Image>
       )
     }
-    return (
-      <Image
-        style={{ flex: 1 }}
-        source={{ uri: this.props.startImage.img }}
-      />
-    )
+    return null
   }
 }
+
+const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+  },
+  // tslint:disable-next-line:no-object-literal-type-assertion
+  text: {
+    alignSelf: 'center',
+    backgroundColor: 'transparent',
+    bottom: 20,
+    color: 'white',
+    fontSize: 14,
+    position: 'absolute',
+  } as TextStyle,
+})
 
 const mapStateToProps = (store: IStore) => ({
   startImage: store.startImage,
 })
 
 const mapDispatchToProps = {
-  fetchStartImage,
+  fetchStartImages,
+  switchScreen,
 }
 
 export default connect<IStateProps, IDispacthProps, {}>(

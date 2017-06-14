@@ -1,25 +1,22 @@
-import { IEmptyAction, IPayloadAction, IStartImage } from '../declarations'
-import ActionTypes from './actionTypes'
+import { Dispatch } from 'react-redux'
+import { returntypeof } from 'react-redux-typescript'
+import { createAction } from 'redux-actions'
+import { SCREEN_TYPE } from '../constants/index'
+import { IStartImage, IStore } from '../declarations'
+import { switchScreen } from './switchScreen'
 
-export type IFetchStartImageActionResultType = IEmptyAction
+const recieveStartImage = createAction('RECIVE_START_IMAGE', (response: IStartImage) => response)
+const recieveStartImageType = returntypeof(recieveStartImage)
+export type IRecieveStartImageAction = typeof recieveStartImageType
+export const fetchStartImages = () => (dispatch: Dispatch<IStore>) =>
+  fetch('http://localhost:8111/start-image').then(
+    (response) => response.json().then(
+      (json) => {
+        dispatch(recieveStartImage(json))
+        setTimeout(() => {
+          dispatch(switchScreen(SCREEN_TYPE.ROUTER_SCREEN))
+        }, 3500)
+      }),
+    )
 
-export type IFetchStartImageAction = () => IFetchStartImageActionResultType
-
-export const fetchStartImage = () => (
-  {
-    type: ActionTypes.FETCH_START_IMAGE,
-  }
-)
-
-export type IRecieveStartImageActionParam = IStartImage
-
-export type IRecieveStartImageActionResultType = IPayloadAction<IRecieveStartImageActionParam>
-
-export type IRecieveStartImageAction = (params: IRecieveStartImageActionParam) => IRecieveStartImageActionResultType
-
-export const recieveStartImage = (params: IRecieveStartImageActionParam) => (
-  {
-    payload: params,
-    type: ActionTypes.RECIEVE_START_IMAGE,
-  }
-)
+export type IFetchStartImages = typeof fetchStartImages

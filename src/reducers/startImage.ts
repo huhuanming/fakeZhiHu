@@ -1,21 +1,16 @@
-import ActionTypes from '../actions/actionTypes'
-import { IPayloadAction, IStartImage } from '../declarations'
+import { handleActions } from 'redux-actions'
+import { IRecieveStartImageAction } from '../actions/startImage'
+import { IStartImage } from '../declarations'
 
 const defaultValue: IStartImage = {
   img: '',
   text: '',
 }
 
-const startImageReducer = (
-  state = defaultValue,
-  action: IPayloadAction<IStartImage>,
-) => {
-  switch (action.type) {
-    case ActionTypes.RECIEVE_START_IMAGE:
-     return action.payload
-    default:
-      return state
-  }
-}
+const startImageReducer = handleActions({
+  RECIVE_START_IMAGE: (state, action: IRecieveStartImageAction) => ({
+    ...action.payload,
+  }),
+}, defaultValue)
 
 export default startImageReducer

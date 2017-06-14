@@ -2,8 +2,9 @@ import React from 'react'
 import { Image, ImageStyle, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { connect } from 'react-redux'
+import { returntypeof } from 'react-redux-typescript'
 import Color from '../../../constants/color'
-import { Banner as BannerData, IStore } from '../../../declarations'
+import { IStore } from '../../../declarations'
 
 interface IStyle {
   container: ImageStyle
@@ -34,11 +35,18 @@ const styles = StyleSheet.create<IStyle>({
   },
 })
 
-interface IStateProps {
-  banners: BannerData[]
-}
+const mapStateToProps = (state: IStore) => ({
+  banners: state.banners,
+})
 
-type IProps = IStateProps
+const mapStateToPropsType = returntypeof(mapStateToProps)
+
+type IStateProps = typeof mapStateToPropsType
+
+// tslint:disable-next-line:no-empty-interface
+interface IOwnProps {}
+
+type IProps = IStateProps & IOwnProps
 
 const Banner = (props: IProps) => {
   const items = props.banners.map((banner) => {
@@ -64,8 +72,4 @@ const Banner = (props: IProps) => {
   )
 }
 
-const mapStateToProps = (state: IStore) => ({
-  banners: state.banners,
-})
-
-export default connect(mapStateToProps)(Banner)
+export default connect<IStateProps, undefined, IOwnProps>(mapStateToProps)(Banner)

@@ -4,6 +4,7 @@ import {
   createStore,
 } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
+import thunk from 'redux-thunk'
 import epics from '../epics'
 import reducers from '../reducers'
 
@@ -12,6 +13,7 @@ const composeAction = __DEV__ && global['reduxNativeDevToolsCompose'] ? global['
 
 const enhancer = composeAction(
   applyMiddleware(
+    thunk,
     createEpicMiddleware(epics),
   ),
 )

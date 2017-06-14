@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import {
   Animated,
 } from 'react-native'
 import { NavigationState } from 'react-navigation'
+import { SCREEN_TYPE } from './constants/index'
 
 
 declare var reduxNativeDevToolsCompose: <R>(a: R) => R
@@ -32,10 +33,20 @@ export interface IStartImage {
 	img: string
 }
 
+export interface IPost {
+  title: string
+  img: string
+  date: string
+}
+
 export interface IStore {
  banners: Banner[]
  startImage: IStartImage
  router: NavigationState
+ screen: {
+   screenType: SCREEN_TYPE
+ }
+ posts: IPost[]
 }
 
 export interface Banner {

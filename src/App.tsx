@@ -1,13 +1,14 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './middlewares'
-import Router from './pages/Router'
+import Index from './pages'
 
 export class App extends React.Component<{}, {}> {
+
   public render() {
     return (
       <Provider store={store}>
-        <Router />
+        <Index />
       </Provider>
     )
   }

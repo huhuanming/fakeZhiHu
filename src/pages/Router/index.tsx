@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { addNavigationHelpers, NavigationState, StackNavigator } from 'react-navigation'
-import { connect, Dispatch } from 'react-redux'
+import { connect, DispatchProp } from 'react-redux'
 import { IStore } from '../../declarations'
 import Home from '../Home'
 import StartImage from '../StartImage'
@@ -22,11 +22,7 @@ interface IStateProps {
   router: NavigationState
 }
 
-interface IOwnProps {
-  dispatch?: Dispatch<IStore>
-}
-
-type IProps = IStateProps & IOwnProps
+type IProps = IStateProps & DispatchProp<any>
 
 const Router = (props: IProps) => (
   <AppNavigator
@@ -43,6 +39,6 @@ const mapStateToProps = (store: IStore) => ({
   router: store.router,
 })
 
-export default connect<IStateProps, {}, IOwnProps>(
+export default connect<IStateProps, {}, {}>(
   mapStateToProps,
 )(Router)
